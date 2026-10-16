@@ -1,0 +1,28 @@
+{
+  "domains": [
+    {
+      "name": "example-airport",
+      "domain": "example.com",
+      "push_to": ["free"]
+    }
+  ],
+  "crawl": {
+    "enable": true
+  },
+  "groups": {
+    "free": {
+      "targets": {"clash": "free-clash"}
+    }
+  },
+  "storage": {
+    "items": {
+      "free-clash": {
+        "engine": "gist",
+        "username": "NoobieIII",
+        "gistid": "7ea3f25eb26fa5b534cba6fe69d4a83e",
+        "filename": "clash.yaml",
+        "token": "${PUSH_TOKEN}"
+      }
+    }
+  }
+}

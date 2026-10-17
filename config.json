@@ -11,7 +11,9 @@
   },
   "groups": {
     "free": {
-      "targets": {"clash": "free-clash"}
+      "targets": {
+        "clash": "free-clash"
+      }
     }
   },
   "storage": {

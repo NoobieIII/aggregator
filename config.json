@@ -19,7 +19,7 @@
   "storage": {
     "items": {
       "free-clash": {
-        "type": "gist", 
+        "engine": "gist",
         "username": "NoobieIII",
         "gistid": "7ea3f25eb26fa5b534cba6fe69d4a83e",
         "filename": "clash.yaml",

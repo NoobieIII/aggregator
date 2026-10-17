@@ -1,107 +1,23 @@
 {
-   "sites": [
-       {
-            "name": "example",
-            "subscribe": [],
-            "domain": "",
-            "enable": false,
-            "rename": "",
-            "include": "",
-            "exclude": "",
-            "push_to": [],
-            "ignore_default_exclude": true,
-            "check_alive": true,
-            "max_rate": 2.5,
-            "count": 2,
-            "coupon": "",
-            "require_tls": false,
-            "renew": {
-                "accounts": []
-            }
-        }
-    ],
-    "crawl": {
-        "enable": true,
-        "exclude": "",
-        "max_fails": 5,
-        "include_nodes": true,
-        "task": {
-            "rename": "",
-            "include": "",
-            "exclude": ""
-        },
-        "telegram": {
-            "enable": true,
-            "pages": 5,
-            "exclude": "",
-            "channels": {
-                "v2ray_share": {
-                    "include": "",
-                    "exclude": "",
-                    "task": {
-                        "rename": ""
-                    },
-                    "push_to": ["free"]
-                }
-            }
-        },
-        "google": {
-            "enable": false,
-            "exclude": "",
-            "limit": 100,
-            "days": 7,
-            "exclude_sites": [],
-            "push_to": []
-        },
-        "yandex": {
-            "enable": false,
-            "exclude": "",
-            "days": 3,
-            "pages": 5,
-            "exclude_sites": [],
-            "push_to": []
-        },
-        "github": {
-            "enable": true,
-            "pages": 2,
-            "push_to": ["free"],
-            "exclude": "",
-            "exclude_repos": []
-        },
-        "twitter": {
-            "enable": false,
-            "users": {}
-        },
-        "repositories": [],
-        "pages": [],
-        "scripts": []
-    },
-    "groups": {
-        "free": {
-            "emoji": true,
-            "list_only": true,
-            "targets": {
-                "clash": "free-clash"
-            },
-            "regularize": {
-                "enable": false,
-                "locate": true,
-                "residential": true,
-                "digits": 2
-            }
-        }
-    },
-    "storage": {
-        "engine": "github",
-        "items": {
-            "free-clash": {
-                "username": "NoobieIII",
-                "repo": "NoobieIII/aggregator",
-                "branch": "main",
-                "dir": "subscribe",
-                "filename": "clash.yaml",
-                "token": "${PUSH_TOKEN}"
-            }
-        }
+  "sites": [],
+  "crawl": {
+    "enable": true
+  },
+  "groups": {
+    "free": {
+      "targets": {
+        "clash": "free-clash"
+      }
     }
+  },
+  "storage": {
+    "engine": "gist",
+    "items": {
+      "free-clash": {
+        "username": "NoobieIII",
+        "gist_id": "7ea3f25eb26fa5b534cba6fe69d4a83e",
+        "filename": "clash.yaml"
+      }
+    }
+  }
 }

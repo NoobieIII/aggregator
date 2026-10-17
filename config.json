@@ -1,10 +1,10 @@
 {
    "sites": [
        {
-            "name": "",
+            "name": "example",
             "subscribe": [],
             "domain": "",
-            "enable": true,
+            "enable": false,
             "rename": "",
             "include": "",
             "exclude": "",
@@ -16,23 +16,7 @@
             "coupon": "",
             "require_tls": false,
             "renew": {
-                "accounts": [
-                    {
-                        "email": "",
-                        "password": "",
-                        "ticket": {
-                            "enable": true,
-                            "auto_reset": false,
-                            "subject": "",
-                            "message": "",
-                            "level": 1
-                        }
-                    }
-                ],
-                "plan_id": 3,
-                "package": "",
-                "method": 1,
-                "coupon_code": ""
+                "accounts": []
             }
         }
     ],
@@ -51,13 +35,13 @@
             "pages": 5,
             "exclude": "",
             "channels": {
-                "channel": {
+                "v2ray_share": {
                     "include": "",
                     "exclude": "",
                     "task": {
                         "rename": ""
                     },
-                    "push_to": []
+                    "push_to": ["free"]
                 }
             }
         },
@@ -80,65 +64,17 @@
         "github": {
             "enable": true,
             "pages": 2,
-            "push_to": [],
+            "push_to": ["free"],
             "exclude": "",
             "exclude_repos": []
         },
         "twitter": {
-            "enable": true,
-            "users": {
-                "username": {
-                    "enable": true,
-                    "tweets": 30,
-                    "include": "",
-                    "exclude": "",
-                    "task": {
-                        "rename": ""
-                    },
-                    "push_to": []
-                }
-            }
+            "enable": false,
+            "users": {}
         },
-        "repositories": [
-            {
-                "enable": false,
-                "username": "",
-                "repo": "",
-                "commits": 3,
-                "exclude": "",
-                "push_to": []
-            }
-        ],
-        "pages": [
-            {
-                "enable": true,
-                "url": "",
-                "include": "",
-                "exclude": "",
-                "paged": true,
-                "placeholder": "",
-                "start": 1,
-                "end": 10,
-                "task": {
-                    "rename": ""
-                },
-                "push_to": []
-            }
-        ],
-        "scripts": [
-            {
-                "enable": false,
-                "plugin": "dynamic",
-                "persist": "",
-                "task": {
-                    "enable": true,
-                    "check_alive": true,
-                    "exclude": "",
-                    "rename": "",
-                    "push_to": []
-                }
-            }
-        ]
+        "repositories": [],
+        "pages": [],
+        "scripts": []
     },
     "groups": {
         "free": {
@@ -156,11 +92,13 @@
         }
     },
     "storage": {
-        "engine": "gist",
+        "engine": "github",
         "items": {
             "free-clash": {
                 "username": "NoobieIII",
-                "gistid": "7ea3f25eb26fa5b534cba6fe69d4a83e",
+                "repo": "NoobieIII/aggregator",
+                "branch": "main",
+                "dir": "subscribe",
                 "filename": "clash.yaml",
                 "token": "${PUSH_TOKEN}"
             }

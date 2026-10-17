@@ -1,10 +1,74 @@
 {
   "sites": [],
   "crawl": {
-    "enable": true
+    "enable": true,
+    "exclude": "",
+    "max_fails": 5,
+    "include_nodes": true,
+    "task": {
+      "push_to": ["free"]
+    },
+    "telegram": {
+      "enable": true,
+      "pages": 5,
+      "channels": {
+        "v2ray_share": { "push_to": ["free"] },
+        "ssr_list": { "push_to": ["free"] },
+        "v2list": { "push_to": ["free"] },
+        "baipiao01": { "push_to": ["free"] },
+        "kxswa": { "push_to": ["free"] },
+        "sharecentre": { "push_to": ["free"] },
+        "vpnLG": { "push_to": ["free"] }
+      }
+    },
+    "google": {
+      "enable": true,
+      "limit": 100,
+      "days": 7,
+      "push_to": ["free"]
+    },
+    "yandex": {
+      "enable": true,
+      "days": 3,
+      "pages": 5,
+      "push_to": ["free"]
+    },
+    "github": {
+      "enable": true,
+      "pages": 3,
+      "push_to": ["free"]
+    },
+    "twitter": {
+      "enable": true,
+      "users": {
+        "v2ray_share": {
+          "tweets": 30,
+          "push_to": ["free"]
+        }
+      }
+    },
+    "scripts": [
+      {
+        "plugin": "dynamic",
+        "enable": true,
+        "task": { "push_to": ["free"] }
+      },
+      {
+        "plugin": "v2rayse",
+        "enable": true,
+        "task": { "push_to": ["free"] }
+      },
+      {
+        "plugin": "gitforks",
+        "enable": true,
+        "task": { "push_to": ["free"] }
+      }
+    ]
   },
   "groups": {
     "free": {
+      "emoji": true,
+      "list_only": true,
       "targets": {
         "clash": "free-clash"
       }
